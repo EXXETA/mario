@@ -1,0 +1,12 @@
+{
+    "login.placeholder.username": "Username",
+    "login.placeholder.password": "Password",
+    "login.button.login": "Login",
+    "login.button.register": "Register",
+
+    "register.placeholder.email": "Email",
+    "register.placeholder.username": "Username",
+    "register.placeholder.password": "Password",
+    "register.button.register": "Register"
+
+}

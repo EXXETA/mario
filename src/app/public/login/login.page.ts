@@ -8,13 +8,16 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 })
 export class LoginPage implements OnInit {
 
+  private username: string;
+  private password: string;
+
   constructor(private authService: AuthenticationService) { }
 
   ngOnInit() {
   }
 
   login() {
-    this.authService.login();
+    this.authService.login(this.username, this.password);
   }
 
 }
