@@ -24,7 +24,8 @@ export class AuthenticationService {
     });
   }
 
-  public login(): Promise<void> {
+  public login(username: string, password: string): Promise<void> {
+    console.log(username, password);
     return this.storage.set(TOKEN_KEY, 'Bearer 1234567').then(() => {
       this.authenticationState.next(true);
     });
