@@ -17,7 +17,11 @@ export class LoginPage implements OnInit {
   }
 
   login() {
-    this.authService.login(this.username, this.password);
+    this.authService.login(this.username, this.password).subscribe(user => {
+      if (!user) {
+        alert('Login failed');
+      }
+    });
   }
 
 }
