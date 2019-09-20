@@ -1,34 +1,118 @@
 app-login {
-    
+
 }
 
+
 $white-color: #fff;
-$height100: 100%;
+
+
+.clickableItem {
+  cursor: pointer;
+}
 
 ion-grid {
     width:100%;
-    height: $height100;
-    background: #dfdfdf;
+    height: 100%;
+    padding: 0;
+    background: rgb(214,93,177);
+    background: linear-gradient(0deg, rgba(214,93,177,1) 0%, rgba(0,126,217,1) 100%);
+}
+
+#logoCircle {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  margin: auto;
+  box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,0.75);
+  background-color: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(165,174,255,1) 100%);
+  display: flex;
+  position: relative;
+  animation: slideFromTop 0.2s ease-out;
+}
+
+#leftSlideIn {
+  animation: slideFromLeft 0.4s ease-out;
+}
+
+#bottomSlideIn {
+  animation: slideFromBottom 0.3s ease-out;
+}
+
+
+#logoImage {
+  align-self: center;
+  position: absolute;
+  left: 45px;
+  margin: auto;
+  height: 170px;
 }
 
 ion-row {
-    height: $height100;
+    background: transparent;
+}
+
+ion-input {
+  border-bottom: 1px solid #D3D8FF;
+  font-size: 25px;
+  margin-top: 30px;
+  color: #BBBBBB;
+}
+
+ion-input.has-focus {
+  border-bottom: 1px solid #FFFFFF;
+  color: #FFFFFF;
+}
+
+ion-label {
+  color: #BBBBBB;
 }
 
 ion-col {
-    border: 1px solid #488aff;
-    background: $white-color;
+    margin-top: 50px;
 }
 
 ion-button {
     font-weight: 300;
+    background-color: #6494FF;
+    height: 45px;
+    font-size: 25px;
 }
 
 @media (min-width: 240px) and (max-width: 768px) {
     ion-grid {
-        background: $white-color;
+      background: rgb(214,93,177);
+      background: linear-gradient(0deg, rgba(0,126,217,1) 0%, rgba(214,93,177,1) 100%);
     }
     ion-col {
         border: none;
     }
+}
+
+@keyframes slideFromTop {
+ 0%   {
+   transform: translateY(-100%);
+ }
+ 100% {
+   transform: translateY(0%);
+ }
+}
+
+@keyframes slideFromLeft {
+ 0%   {
+   transform: translateX(-100%);
+ }
+ 100% {
+   transform: translateX(0%);
+ }
+}
+
+
+@keyframes slideFromBottom {
+ 0%   {
+   transform: translateY(100%);
+ }
+ 100% {
+   transform: translateY(0%);
+ }
 }
