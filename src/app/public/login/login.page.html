@@ -1,32 +1,29 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <ion-grid>
-    <ion-row justify-content-center>
-      <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
-        <div text-center>
-          <h4>Login Form</h4>
+  <ion-grid no-padding>
+    <ion-row class="ion-justify-content-center">
+      <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+        <div id="logoCircle">
+          <img id="logoImage" src="assets/icon.png">
         </div>
-        <div padding>
-          <ion-item>
-            <ion-input type="text" placeholder="{{'login.placeholder.username' | translate}}" [(ngModel)]="username"></ion-input>
-          </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
 
-          <ion-item>
-            <ion-input type="password" placeholder="{{'login.placeholder.password' | translate}}" [(ngModel)]="password"></ion-input>
-          </ion-item>
+        <div class="ion-padding" id="leftSlideIn">
+          <ion-input type="text" placeholder="{{'login.placeholder.username' | translate}}" [(ngModel)]="username"></ion-input>
+          <ion-input type="password" placeholder="{{'login.placeholder.password' | translate}}" [(ngModel)]="password"></ion-input>
         </div>
 
-        <div padding>
-          <ion-button (click)="login()" expand="block">{{ 'login.button.login' | translate }}</ion-button>
+        <div id="bottomSlideIn">
+          <div class="ion-padding">
+            <ion-button (click)="login()" expand="block">{{ 'login.button.login' | translate }}</ion-button>
+          </div>
+          <div class="ion-text-center">
+            <ion-label class="clickableItem">Registrieren</ion-label>
+          </div>
         </div>
-        <div padding>
-          <ion-button expand="block" color="secondary" routerLink="/register" routerDirection="forward">{{ 'login.button.register' | translate }}</ion-button>
-        </div>
+
 
       </ion-col>
     </ion-row>
